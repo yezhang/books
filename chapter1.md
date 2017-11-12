@@ -2,13 +2,7 @@
 
 #### 1、基本配色规则
 
-基本
+基本配色规则共 6 种，分别是“类比色”、“单色”、“三元群”、“互补色”、“复合”、“浓度”。
 
-基本配色规则![](/assets/Adobe Color Themes配色方法@2x.png)
-
-
-
-
-
-
+![](/assets/Adobe Color Themes配色方法@2x.png)
 
