@@ -33,9 +33,9 @@ BOOL APIENTRY DllMain(HMODULE hModule,DWORD  ul_reason_for_call, LPVOID lpReserv
 
 本设置参考资料是：[https://msdn.microsoft.com/zh-cn/library/c91k1xcf.aspx](https://msdn.microsoft.com/zh-cn/library/c91k1xcf.aspx)
 
+## 参考资料
+
+1. 在 Win32 DLL 中使用MFC，[http://www.cnblogs.com/dcai/archive/2011/10/12/2208052.html](http://www.cnblogs.com/dcai/archive/2011/10/12/2208052.html)
 
 
-参考资料
-
-在 Win32 DLL 中使用MFC，http://www.cnblogs.com/dcai/archive/2011/10/12/2208052.html
 
