@@ -19,3 +19,15 @@ BOOL APIENTRY DllMain(    HMODULE hModule,DWORD  ul_reason_for_call, LPVOID lpRe
 
 官方插件文档中所说的入口点函数 DllEntryPoint 经过试验无法生效。
 
+
+
+调试OllyDBG插件
+
+在VS的项目属性页，设置 【调试】--&gt;【命令】为 &lt;OllyDBG.exe&gt; 的路径。如下图所示。
+
+![](/assets/vs-project-properties.png)
+
+
+
+之后，点击 F5 执行即可。
+
