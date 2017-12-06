@@ -27,7 +27,7 @@ BOOL APIENTRY DllMain(HMODULE hModule,DWORD  ul_reason_for_call, LPVOID lpReserv
 
 之后，点击 F5 执行即可。
 
-如果出现以下窗口，直接关闭即可。
+如果出现以下窗口，点击【是】继续调试。
 
 ![](/assets/debug-warning.png)
 
