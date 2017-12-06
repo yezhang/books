@@ -14,7 +14,7 @@ OllyDbg插件生命周期
 编写入口点函数
 
 ```cpp
-BOOL APIENTRY DllMain(    HMODULE hModule,DWORD  ul_reason_for_call, LPVOID lpReserved)
+BOOL APIENTRY DllMain(HMODULE hModule,DWORD  ul_reason_for_call, LPVOID lpReserved)
 ```
 
 官方插件文档中所说的入口点函数 DllEntryPoint 经过试验无法生效。
@@ -27,7 +27,5 @@ BOOL APIENTRY DllMain(    HMODULE hModule,DWORD  ul_reason_for_call, LPVOID lpRe
 
 之后，点击 F5 执行即可。
 
-本设置参考资料是：https://msdn.microsoft.com/zh-cn/library/c91k1xcf.aspx
-
-
+本设置参考资料是：[https://msdn.microsoft.com/zh-cn/library/c91k1xcf.aspx](https://msdn.microsoft.com/zh-cn/library/c91k1xcf.aspx)
 
