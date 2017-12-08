@@ -54,9 +54,19 @@ ENSURE(str.LoadString(IDP_AFXBARRES_SCROLL_RIGHT));
 m_btnScrollRight.SetTooltip(str);
 ```
 
-解决方案：https://social.msdn.microsoft.com/Forums/vstudio/en-US/5d84c08f-fbb6-4233-98f1-53adb8cbc50b/loadstringids-cause-exception-in-vc-2008-with-featured-pack-for-upgraded-project?forum=vcgeneral
+解决方案：[https://social.msdn.microsoft.com/Forums/vstudio/en-US/5d84c08f-fbb6-4233-98f1-53adb8cbc50b/loadstringids-cause-exception-in-vc-2008-with-featured-pack-for-upgraded-project?forum=vcgeneral](https://social.msdn.microsoft.com/Forums/vstudio/en-US/5d84c08f-fbb6-4233-98f1-53adb8cbc50b/loadstringids-cause-exception-in-vc-2008-with-featured-pack-for-upgraded-project?forum=vcgeneral)
 
-> it's a known problem for statically linked projects using the feature pack.  You have to include afxribbon.rc in your resource file.  See [http://forums.msdn.microsoft.com/en-US/vcgeneral/thread/7245ee72-ffd5-4167-b690-c2edc10fb88e/](http://forums.msdn.microsoft.com/en-US/vcgeneral/thread/7245ee72-ffd5-4167-b690-c2edc10fb88e/) for more info.
+> it's a known problem for statically linked projects using the feature pack.  You have to include afxribbon.rc in your resource file.  See [http://forums.msdn.microsoft.com/en-US/vcgeneral/thread/7245ee72-ffd5-4167-b690-c2edc10fb88e/](http://forums.msdn.microsoft.com/en-US/vcgeneral/thread/7245ee72-ffd5-4167-b690-c2edc10fb88e/) for more info.
+
+在资源文件中，添加如下指令：
+
+```
+#if !defined(_AFXDLL)
+#include "afxribbon.rc"              // MFC ribbon and control bar resources
+#endif
+```
+
+
 
 ## 参考资料
 
