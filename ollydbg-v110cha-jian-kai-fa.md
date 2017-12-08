@@ -39,6 +39,25 @@ BOOL APIENTRY DllMain(HMODULE hModule,DWORD  ul_reason_for_call, LPVOID lpReserv
 
 本设置参考资料是：[https://msdn.microsoft.com/zh-cn/library/c91k1xcf.aspx](https://msdn.microsoft.com/zh-cn/library/c91k1xcf.aspx)
 
+## 常见问题
+
+问题1：在运行过程中，如果出现断言错误，如下：
+
+```cpp
+ENSURE(str.LoadString(IDS_AFXBARRES_CLOSEBAR));
+m_btnClose.SetTooltip(str);
+
+ENSURE(str.LoadString(IDP_AFXBARRES_SCROLL_LEFT));
+m_btnScrollLeft.SetTooltip(str);
+
+ENSURE(str.LoadString(IDP_AFXBARRES_SCROLL_RIGHT));
+m_btnScrollRight.SetTooltip(str);
+```
+
+解决方案：https://social.msdn.microsoft.com/Forums/vstudio/en-US/5d84c08f-fbb6-4233-98f1-53adb8cbc50b/loadstringids-cause-exception-in-vc-2008-with-featured-pack-for-upgraded-project?forum=vcgeneral
+
+> it's a known problem for statically linked projects using the feature pack.  You have to include afxribbon.rc in your resource file.  See [http://forums.msdn.microsoft.com/en-US/vcgeneral/thread/7245ee72-ffd5-4167-b690-c2edc10fb88e/](http://forums.msdn.microsoft.com/en-US/vcgeneral/thread/7245ee72-ffd5-4167-b690-c2edc10fb88e/) for more info.
+
 ## 参考资料
 
 1. 在 Win32 DLL 中使用MFC，[http://www.cnblogs.com/dcai/archive/2011/10/12/2208052.html](http://www.cnblogs.com/dcai/archive/2011/10/12/2208052.html)
