@@ -13,7 +13,11 @@ OllyDbg插件生命周期
 
 ## 创建项目
 
-使用Win32空项目，配置项目属性为dll。
+1、使用Win32空项目，配置项目属性为dll。
+
+2、为项目添加MFC资源。
+
+![](/assets/resource.png)
 
 ## 样例代码说明
 
@@ -65,8 +69,6 @@ m_btnScrollRight.SetTooltip(str);
 #include "afxribbon.rc"              // MFC ribbon and control bar resources
 #endif
 ```
-
-
 
 ## 参考资料
 
