@@ -29,8 +29,6 @@ BOOL APIENTRY DllMain(HMODULE hModule,DWORD  ul_reason_for_call, LPVOID lpReserv
 
 官方插件文档中所说的入口点函数 DllEntryPoint 经过试验无法生效。
 
-
-
 ## 遇到的问题
 
 键盘事件无效：
@@ -75,6 +73,18 @@ m_btnScrollRight.SetTooltip(str);
 #include "afxribbon.rc"              // MFC ribbon and control bar resources
 #endif
 ```
+
+## 附录
+
+### MFC类型继承结构![](/assets/class-inherit.png)
+
+### ![](/assets/class-inherit.png)
+
+### ![](/assets/class-inherit.png)
+
+### ![](/assets/class-inherit.png)
+
+
 
 ## 参考资料
 
