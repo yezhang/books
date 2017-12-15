@@ -78,13 +78,11 @@ m_btnScrollRight.SetTooltip(str);
 
 ### MFC类型继承结构![](/assets/class-inherit.png)
 
-### ![](/assets/class-inherit.png)
+### 
 
-### ![](/assets/class-inherit.png)
+### 
 
-### ![](/assets/class-inherit.png)
-
-
+### 
 
 ## 参考资料
 
