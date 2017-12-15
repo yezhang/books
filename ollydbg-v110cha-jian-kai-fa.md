@@ -73,6 +73,7 @@ m_btnScrollRight.SetTooltip(str);
 ## 参考资料
 
 1. 在 Win32 DLL 中使用MFC，[http://www.cnblogs.com/dcai/archive/2011/10/12/2208052.html](http://www.cnblogs.com/dcai/archive/2011/10/12/2208052.html)
+2. 将MFC作为DLL的一部分，https://msdn.microsoft.com/en-us/library/zfz4xb9a.aspx
 
 
 
