@@ -33,6 +33,8 @@ BOOL APIENTRY DllMain(HMODULE hModule,DWORD  ul_reason_for_call, LPVOID lpReserv
 
 键盘事件无效：
 
+OD事件传递：在MainFrame中定义【自定义消息】。
+
 ## 调试OllyDBG插件
 
 在VS的项目属性页，设置 【调试】--&gt;【命令】为 &lt;OllyDBG.exe&gt; 的路径。如下图所示。
@@ -76,9 +78,9 @@ m_btnScrollRight.SetTooltip(str);
 
 ## 附录
 
-### MFC类型继承结构 
+### MFC类型继承结构
 
-###   ![](/assets/class-inherit.png)
+### ![](/assets/class-inherit.png)
 
 ### 
 
