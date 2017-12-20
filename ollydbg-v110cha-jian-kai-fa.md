@@ -78,7 +78,7 @@ m_btnScrollRight.SetTooltip(str);
 
 问题2：OllyDBG的插件有哪些？
 
-> https://github.com/Hack-with-Github/Powerful-Plugins/blob/master/OllyDbg.md
+> [https://github.com/Hack-with-Github/Powerful-Plugins/blob/master/OllyDbg.md](https://github.com/Hack-with-Github/Powerful-Plugins/blob/master/OllyDbg.md)
 
 ## 附录
 
