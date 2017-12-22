@@ -2,6 +2,12 @@
 
 [http://www.boost.org/doc/libs/1\_47\_0/doc/html/boost\_propertytree/accessing.html](http://www.boost.org/doc/libs/1_47_0/doc/html/boost_propertytree/accessing.html)
 
+声明 Key 是 string、Value 也是 string 类型的树
+
+```
+pt::ptree root;
+```
+
 访问节点上的值
 
 ```cpp
