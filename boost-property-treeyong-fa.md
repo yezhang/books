@@ -54,7 +54,7 @@ template <typename Key>
 struct path_of;
 ```
 
-清楚数据和孩子节点
+清除数据和孩子节点
 
 ```cpp
 /** Clear this tree completely, of both data and children. */
