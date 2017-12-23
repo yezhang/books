@@ -41,7 +41,7 @@ root.put_value(item);
 pItem = &root.get_value<struct Item>();
 ```
 
-如果自定义的key值不是 string 类型，是自定义类型，则需要注意一下内容：
+注意：如果自定义的key值不是 string 类型，是自定义类型，则需要注意一下内容：
 
 boost\_1\_66\_0\boost\property\_tree\ptree\_fwd.hpp
 
