@@ -33,12 +33,25 @@ struct Item {
     unsigned int ip;
 } item, *pItem;
 
-pt::basic_ptree<unsigned long, struct Item> root;
+pt::basic_ptree<std::string, struct Item> root;
 
 item.ip = 0x123;
 root.put_value(item);
 
 pItem = &root.get_value<struct Item>();
+```
+
+如果自定义的key值不是 string 类型，是自定义类型，则需要注意一下内容：
+
+boost\_1\_66\_0\boost\property\_tree\ptree\_fwd.hpp
+
+```
+/// If you want to use a custom key type, specialize this struct for it
+/// and give it a 'type' typedef that specifies your path type. The path
+/// type must conform to the Path concept described in the documentation.
+/// This is already specialized for std::basic_string.
+template <typename Key>
+struct path_of;
 ```
 
 
