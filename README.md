@@ -1,6 +1,6 @@
-# My Awesome Book
+# 入门系列 - Begining Series
 
-This file serves as your book's preface, a great place to describe your book's content and ideas.
 
-![](/assets/boy-4.png)
+
+本书籍包含开发、设计两类职业技能的入门文章。
 
