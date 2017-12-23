@@ -13,16 +13,17 @@ pt::ptree root;
 访问节点上的值
 
 ```cpp
-pt::ptree root;
-root.put_value(0x123);
-int value = root.get_value<int>();
+pt::ptree defRoot;
+defRoot.put_value("12");
+////////////////////////
+std::string val = defRoot.get_value<std::string>();
 ```
 
 设置节点的值
 
 ```cpp
-ptree pt;
-pt.put_value(3.14f);
+pt::ptree defRoot;
+defRoot.put_value("12");
 ```
 
 声明自定义类型的树
