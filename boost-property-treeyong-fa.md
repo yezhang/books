@@ -57,6 +57,27 @@ struct path_of;
 删除所有后代孩子节点
 
 > 注意：clear\(\) 函数清空节点本身的数据、同时嵌套清空后代节点。
+>
+> 使用 add\_child 添加节点时，被添加的子节点会通过拷贝构造的方式，添加到父节点中。
+>
+> ```
+> pt::ptree tree;
+> tree.put_value("tree");
+>
+> pt::ptree child;
+> child.put_value("child");
+>
+> pt::ptree subchild;
+> subchild.put_value("subchild");
+>
+> tree.add_child("child", child);
+> child.add_child("subchild", subchild);
+>
+> int childSize = child.size(); // 外部的 child 节点，孩子数量是 1
+>
+> pt::ptree& childRef = tree.get_child("child");
+> int refSize = childRef.size(); // tree中的子节点 child，其孩子数量仍然是 0
+> ```
 
 ```cpp
 pt::ptree tree;
