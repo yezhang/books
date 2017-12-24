@@ -54,9 +54,9 @@ template <typename Key>
 struct path_of;
 ```
 
-删除所有孩子节点
+删除所有后代孩子节点
 
-> 注意：clear\(\) 函数只清空节点本身的数据和直接孩子节点，不嵌套清空后代节点。
+> 注意：clear\(\) 函数清空节点本身的数据、同时嵌套清空后代节点。
 
 ```cpp
 pt::ptree tree;
