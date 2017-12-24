@@ -4,13 +4,13 @@
 
 [http://www.boost.org/doc/libs/1\_47\_0/doc/html/boost\_propertytree/accessing.html](http://www.boost.org/doc/libs/1_47_0/doc/html/boost_propertytree/accessing.html)
 
-声明 Key 是 string、Value 也是 string 类型的树
+###### 声明 Key 是 string、Value 也是 string 类型的树
 
 ```
 pt::ptree root;
 ```
 
-访问节点上的值
+###### 访问节点上的值
 
 ```cpp
 pt::ptree defRoot;
@@ -19,14 +19,14 @@ defRoot.put_value("12");
 std::string val = defRoot.get_value<std::string>();
 ```
 
-设置节点的值
+###### 设置节点的值
 
 ```cpp
 pt::ptree defRoot;
 defRoot.put_value("12");
 ```
 
-声明自定义类型的树
+###### 声明自定义类型的树
 
 ```cpp
 struct Item {
@@ -54,7 +54,7 @@ template <typename Key>
 struct path_of;
 ```
 
-删除所有后代孩子节点
+###### 删除所有后代孩子节点
 
 > 注意：clear\(\) 函数清空节点本身的数据、同时嵌套清空后代节点。
 >
