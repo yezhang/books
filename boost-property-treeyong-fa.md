@@ -84,5 +84,16 @@ pt::ptree tree;
 tree.clear();
 ```
 
+###### 使用新添加的孩子节点
+
+> add\_child 函数返回新添加函数的引用。
+>
+> 使用该引用操作子节点，可以直接改变树中的数据。
+
+```
+pt::ptree& childRef = tree.add_child("child", child);
+childRef.add_child("subchild", subchild);
+```
+
 
 
