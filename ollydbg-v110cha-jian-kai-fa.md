@@ -33,7 +33,7 @@ BOOL APIENTRY DllMain(HMODULE hModule,DWORD  ul_reason_for_call, LPVOID lpReserv
 
 键盘事件无效：
 
-OD事件传递：在MainFrame中定义【自定义消息】。
+OD事件传递：在MainFrame中定义【自定义消息】或者根据官网介绍，调用 CWinApp::PreTranslateMessage。
 
 ## 调试OllyDBG插件
 
