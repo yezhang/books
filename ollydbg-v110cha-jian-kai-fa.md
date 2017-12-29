@@ -33,7 +33,29 @@ BOOL APIENTRY DllMain(HMODULE hModule,DWORD  ul_reason_for_call, LPVOID lpReserv
 
 键盘事件无效：DLL中的MFC窗口是可以正确建立自己的消息循环的，如果重载 DefWindowProc 函数，可以发现该函数被多次调用。在普通的MFC应用中，PreTranslateMessage可以用于处理快捷键消息。但是，在DLL中PreTranslateMessage函数不会被调用。
 
-在 PluginApp 中加载快捷键资源。
+在 PluginApp 中加载快捷键资源。经过测试，重载 CMDIFrameWndEx::WindowProc 方法，在 WM\_CREATE 消息中添加系统快捷键可以成功响应键盘事件。此方法添加的是操作系统级别的快捷键，添加代码如下。
+
+```cpp
+LRESULT CMainFrame::WindowProc(UINT message, WPARAM wParam, LPARAM lParam)
+{
+	
+	switch (message)
+	{
+	case WM_CREATE:
+		RegisterHotKey(
+			this->GetSafeHwnd(),   // 注册快捷键的窗口句柄
+			1,      // 热键标识符避免热键冲突
+			MOD_CONTROL | MOD_NOREPEAT, // Ctrl 键  No Repeat 不重复发送
+			'A'     // A
+			);
+		break;
+	default:
+		break;
+	}
+}
+```
+
+这种方法注册的系统级别快捷键，无论按下快捷键的时候OD是否激活、本插件是否激活，都会触发 WM\_HOTKEY 消息。在程序设计上，不推荐使用。
 
 OD事件传递：在MainFrame中定义【自定义消息】或者根据[官网](https://docs.microsoft.com/zh-cn/cpp/mfc/tn011-using-mfc-as-part-of-a-dll#winmain---dllmain "dllmain")介绍，调用 CWinApp::PreTranslateMessage。
 
