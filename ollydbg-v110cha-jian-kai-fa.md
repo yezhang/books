@@ -59,6 +59,10 @@ LRESULT CMainFrame::WindowProc(UINT message, WPARAM wParam, LPARAM lParam)
 
 手动接受OD的快捷键，并执行消息转换。手动构造 TranslateAccelerator 需要的参数。
 
+wParam 控制虚拟按键，https://msdn.microsoft.com/en-us/library/windows/desktop/dd375731\(v=vs.85\).aspx
+
+虚拟按键包括Control、Shift、Alt、英文字母等。
+
 OD事件传递：在MainFrame中定义【自定义消息】或者根据[官网](https://docs.microsoft.com/zh-cn/cpp/mfc/tn011-using-mfc-as-part-of-a-dll#winmain---dllmain "dllmain")介绍，调用 CWinApp::PreTranslateMessage。
 
 ## 调试OllyDBG插件
