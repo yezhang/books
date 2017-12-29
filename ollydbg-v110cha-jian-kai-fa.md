@@ -31,7 +31,7 @@ BOOL APIENTRY DllMain(HMODULE hModule,DWORD  ul_reason_for_call, LPVOID lpReserv
 
 ## 遇到的问题
 
-键盘事件无效：DLL中的MFC窗口是可以正确建立自己的消息循环的，如果重载 DefWindowProc 函数，可以发现该函数被多次调用。
+键盘事件无效：DLL中的MFC窗口是可以正确建立自己的消息循环的，如果重载 DefWindowProc 函数，可以发现该函数被多次调用。在普通的MFC应用中，PreTranslateMessage可以用于处理快捷键消息。但是，在DLL中PreTranslateMessage函数不会被调用。
 
 OD事件传递：在MainFrame中定义【自定义消息】或者根据[官网](https://docs.microsoft.com/zh-cn/cpp/mfc/tn011-using-mfc-as-part-of-a-dll#winmain---dllmain "dllmain")介绍，调用 CWinApp::PreTranslateMessage。
 
