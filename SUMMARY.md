@@ -6,5 +6,4 @@
 * [OllyDBG v1.10插件开发](ollydbg-v110cha-jian-kai-fa.md)
 * [Windows 调试 API](windows-diao-shi-api.md)
 * [Boost Property Tree用法](boost-property-treeyong-fa.md)
-* [从Chromium源代码理解overflow](cong-chromium-yuan-dai-ma-li-jie-overflow.md)
 
