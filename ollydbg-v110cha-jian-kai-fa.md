@@ -67,13 +67,15 @@ wParam 控制虚拟按键，[https://msdn.microsoft.com/en-us/library/windows/de
 
 ```
 extc int _export cdecl ODBG_Pluginshortcut(
-	int origin, int ctrl, int alt, int shift, int key, void *item) {
+    int origin, int ctrl, int alt, int shift, int key, void *item) {
 
-	::PostMessage(hwtrace, WM_KEYDOWN, 0x45, MapVirtualKey(0x45, MAPVK_VK_TO_VSC));
-	
-	return 0;  // 0 表示快捷键未识别；返回 0 以便其它插件继续处理。                    
+    ::PostMessage(hwtrace, WM_KEYDOWN, 0x45, MapVirtualKey(0x45, MAPVK_VK_TO_VSC));
+
+    return 0;  // 0 表示快捷键未识别；返回 0 以便其它插件继续处理。                    
 };
 ```
+
+Window 虚拟按键表：https://msdn.microsoft.com/zh-cn/library/windows/desktop/dd375731\(v=vs.85\).aspx
 
 OD事件传递：在MainFrame中定义【自定义消息】或者根据[官网](https://docs.microsoft.com/zh-cn/cpp/mfc/tn011-using-mfc-as-part-of-a-dll#winmain---dllmain "dllmain")介绍，调用 CWinApp::PreTranslateMessage。
 
