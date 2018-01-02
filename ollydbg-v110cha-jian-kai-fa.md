@@ -75,7 +75,9 @@ extc int _export cdecl ODBG_Pluginshortcut(
 };
 ```
 
-Window 虚拟按键表：https://msdn.microsoft.com/zh-cn/library/windows/desktop/dd375731\(v=vs.85\).aspx
+Windows 虚拟按键表：[https://msdn.microsoft.com/zh-cn/library/windows/desktop/dd375731\(v=vs.85\).aspx](https://msdn.microsoft.com/zh-cn/library/windows/desktop/dd375731%28v=vs.85%29.aspx)
+
+Windows 系统消息列表：https://wiki.winehq.org/List\_Of\_Windows\_Messages
 
 OD事件传递：在MainFrame中定义【自定义消息】或者根据[官网](https://docs.microsoft.com/zh-cn/cpp/mfc/tn011-using-mfc-as-part-of-a-dll#winmain---dllmain "dllmain")介绍，调用 CWinApp::PreTranslateMessage。
 
