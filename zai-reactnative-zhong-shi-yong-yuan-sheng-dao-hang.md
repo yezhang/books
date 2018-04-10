@@ -10,7 +10,7 @@ iOS
 
 Sections/HomePage/controller/PYJHomePageViewController.m
 
-查看其中的 viewDidLoad 函数。
+查看其中的 viewDidLoad 函数。首页和票夹页面，使用了独立的 viewDidLoad，其他页面直接使用 ReactRootView 类。
 
 
 
