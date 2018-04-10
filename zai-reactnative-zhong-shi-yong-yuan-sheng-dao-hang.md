@@ -10,13 +10,11 @@ iOS
 
 Sections/HomePage/controller/PYJHomePageViewController.m
 
+查看其中的 viewDidLoad 函数。
+
 
 
 Android
 
 核心在于：在多个 ReactRootView 对象中共享 ReactInstanceManager。
-
-
-
-
 
