@@ -1,6 +1,6 @@
 # 在 ReactNative 中使用原生导航
 
-iOS
+### iOS
 
 核心在于：在多个 RCTRootView 中共享 RCTBridge。
 
@@ -16,9 +16,7 @@ Sections/HomePage/controller/PYJHomePageViewController.m
 
 RCTRootView\* rootView = \[\[RCTRootView alloc\] initWithBridge:bridge moduleName:@"piaoyouji" **initialProperties**:self.props\];
 
-
-
-Android
+### Android
 
 核心在于：在多个 ReactRootView 对象中共享 ReactInstanceManager。
 
@@ -27,8 +25,4 @@ Android
 .com.yonyou.einvoice.modules.react.MainReactActivityDelegate.java
 
 其中的 getLaunchOptions 函数，设置了程序的启动参数。
-
-
-
-
 
