@@ -22,7 +22,15 @@ RCTRootView\* rootView = \[\[RCTRootView alloc\] initWithBridge:bridge moduleNam
 
 样例代码：
 
-.com.yonyou.einvoice.modules.react.MainReactActivityDelegate.java
+com.yonyou.einvoice.modules.react.MainReactActivityDelegate.java
 
 其中的 getLaunchOptions 函数，设置了程序的启动参数。
+
+或者
+
+com.yonyou.einvoice.modules.react.ReactNativeFragment.java
+
+其中的 mReactRootView.startReactApplication 方法，设置启动参数。
+
+
 
