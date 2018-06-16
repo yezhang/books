@@ -59,9 +59,25 @@ LRESULT CMainFrame::WindowProc(UINT message, WPARAM wParam, LPARAM lParam)
 
 手动接受OD的快捷键，并执行消息转换。手动构造 TranslateAccelerator 需要的参数。
 
-wParam 控制虚拟按键，https://msdn.microsoft.com/en-us/library/windows/desktop/dd375731\(v=vs.85\).aspx
+wParam 控制虚拟按键，[https://msdn.microsoft.com/en-us/library/windows/desktop/dd375731\(v=vs.85\).aspx](https://msdn.microsoft.com/en-us/library/windows/desktop/dd375731%28v=vs.85%29.aspx)
 
 虚拟按键包括Control、Shift、Alt、英文字母等。
+
+【已验证】在 OllyDBG 插件回调函数中，可以将键盘事件发送到插件主窗口。
+
+```
+extc int _export cdecl ODBG_Pluginshortcut(
+    int origin, int ctrl, int alt, int shift, int key, void *item) {
+
+    ::PostMessage(hwtrace, WM_KEYDOWN, 0x45, MapVirtualKey(0x45, MAPVK_VK_TO_VSC));
+
+    return 0;  // 0 表示快捷键未识别；返回 0 以便其它插件继续处理。                    
+};
+```
+
+Windows 虚拟按键表：[https://msdn.microsoft.com/zh-cn/library/windows/desktop/dd375731\(v=vs.85\).aspx](https://msdn.microsoft.com/zh-cn/library/windows/desktop/dd375731%28v=vs.85%29.aspx)
+
+Windows 系统消息列表：https://wiki.winehq.org/List\_Of\_Windows\_Messages
 
 OD事件传递：在MainFrame中定义【自定义消息】或者根据[官网](https://docs.microsoft.com/zh-cn/cpp/mfc/tn011-using-mfc-as-part-of-a-dll#winmain---dllmain "dllmain")介绍，调用 CWinApp::PreTranslateMessage。
 
