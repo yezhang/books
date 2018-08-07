@@ -4,7 +4,11 @@
 
 方法描述：
 
+1、安装自动化脚本。
 
+imagesToCSV\_2columns.jsx
 
+imagesToCSV104.jsx
 
+2、使用 InDesign 中的数据合并功能。
 
