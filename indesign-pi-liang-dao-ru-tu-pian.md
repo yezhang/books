@@ -10,5 +10,7 @@ imagesToCSV\_2columns.jsx
 
 imagesToCSV104.jsx
 
-2、使用 InDesign 中的数据合并功能。
+2、使用自动化脚本生成 csv 文件。
+
+3、使用 InDesign 中的数据合并功能，导入生成的 csv 文件。
 
