@@ -10,4 +10,5 @@
 * [认识 ipfs 点对点超媒体协议](ren-shi-ipfs-dian-dui-dian-chao-mei-ti-xie-yi.md)
 * [搭建 Flume 日志系统](da-jian-flume-ri-zhi-xi-tong.md)
 * 逆向分析 - 使用 WinDbg 导出 .Net 程序的模块
+* [InDesign 批量导入图片](indesign-pi-liang-dao-ru-tu-pian.md)
 
