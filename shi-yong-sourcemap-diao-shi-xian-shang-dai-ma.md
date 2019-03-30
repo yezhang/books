@@ -2,11 +2,11 @@
 
 [https://developers.google.com/web/tools/chrome-devtools/javascript/source-maps?hl=zh-cn](https://developers.google.com/web/tools/chrome-devtools/javascript/source-maps?hl=zh-cn)
 
-
-
 SourceMap 文件部署：
 
 存放在远程服务器
 
 存放在本地服务器
+
+https://blog.sentry.io/2015/10/29/debuggable-javascript-with-source-maps
 
