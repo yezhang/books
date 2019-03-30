@@ -2,6 +2,10 @@
 
 [https://developers.google.com/web/tools/chrome-devtools/javascript/source-maps?hl=zh-cn](https://developers.google.com/web/tools/chrome-devtools/javascript/source-maps?hl=zh-cn)
 
+https://itnext.io/using-sourcemaps-on-production-without-revealing-the-source-code-%EF%B8%8F-d41e78e20c89
+
+
+
 SourceMap 文件部署：
 
 存放在远程服务器
