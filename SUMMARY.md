@@ -11,4 +11,5 @@
 * [搭建 Flume 日志系统](da-jian-flume-ri-zhi-xi-tong.md)
 * 逆向分析 - 使用 WinDbg 导出 .Net 程序的模块
 * [InDesign 批量导入图片](indesign-pi-liang-dao-ru-tu-pian.md)
+* [使用 SourceMap 调试线上代码](shi-yong-sourcemap-diao-shi-xian-shang-dai-ma.md)
 
