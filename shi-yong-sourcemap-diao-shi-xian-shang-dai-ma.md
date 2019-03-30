@@ -2,9 +2,7 @@
 
 [https://developers.google.com/web/tools/chrome-devtools/javascript/source-maps?hl=zh-cn](https://developers.google.com/web/tools/chrome-devtools/javascript/source-maps?hl=zh-cn)
 
-https://itnext.io/using-sourcemaps-on-production-without-revealing-the-source-code-%EF%B8%8F-d41e78e20c89
-
-
+[https://itnext.io/using-sourcemaps-on-production-without-revealing-the-source-code-️-d41e78e20c89](https://itnext.io/using-sourcemaps-on-production-without-revealing-the-source-code-️-d41e78e20c89)
 
 SourceMap 文件部署：
 
@@ -31,4 +29,8 @@ SourceMap 文件部署：
 方法2：在本地切换到线上环境对应的源码，启动本地开发服务器，直接使用 Fiddler 将线上 index.html 映射到本地开发服务器的 URL 地址。
 
 该方法的限制：线上环境是 HTTPS，Fiddler 将线上 URL 映射到本地开发服务器的 URL 时，会无法访问资源。本地开发服务器为 HTTP。
+
+
+
+SourceMap 文件中可能包含源码内容也可以不包含，如果不包含源码内容，则可以用来映射客户端上的堆栈。
 
