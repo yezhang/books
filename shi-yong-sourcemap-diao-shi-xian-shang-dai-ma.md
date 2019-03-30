@@ -18,8 +18,6 @@ SourceMap 文件部署：
 
 启动 SourceMap 本地服务器：http-server ./ -p 8080
 
-
-
 线上调试方案1（Fiddler 代理）
 
 方法1：在本地切换到线上环境对应的源码，找到源码后，直接使用 Fiddler 将线上代码的 index.html 映射到源码文件中。
@@ -28,7 +26,5 @@ SourceMap 文件部署：
 
 方法2：在本地切换到线上环境对应的源码，启动本地开发服务器，直接使用 Fiddler 将线上 index.html 映射到本地开发服务器的 URL 地址。
 
-
-
-
+该方法的限制：线上环境是 HTTPS，Fiddler 将线上 URL 映射到本地开发服务器的 URL 时，会无法访问资源。本地开发服务器为 HTTP。
 
