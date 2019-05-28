@@ -21,6 +21,7 @@
 
 * [HTML 核心概念](qian-duan/html-he-xin-gai-nian.md)
   * [文档类型定义](qian-duan/html-he-xin-gai-nian/wen-dang-lei-xing-ding-yi.md)
+  * [HTML 语义化](qian-duan/html-he-xin-gai-nian/html-yu-yi-hua.md)
 
 ## 编程语言
 
