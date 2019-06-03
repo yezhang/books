@@ -6,6 +6,8 @@
   * [文档类型定义](qian-duan/html-he-xin-gai-nian/wen-dang-lei-xing-ding-yi.md)
   * [HTML 语义化](qian-duan/html-he-xin-gai-nian/html-yu-yi-hua.md)
   * [HTML 可访问性](qian-duan/html-he-xin-gai-nian/html-ke-fang-wen-xing.md)
+  * [HTML 验证](qian-duan/html-he-xin-gai-nian/html-yan-zheng.md)
+  * [扩展阅读](qian-duan/html-he-xin-gai-nian/kuo-zhan-yue-du.md)
 
 ## 编程语言
 
