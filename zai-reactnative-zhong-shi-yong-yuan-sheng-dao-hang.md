@@ -45,7 +45,7 @@ com.yonyou.einvoice.modules.react.ReactNativeFragment.java
 
 React
 
-在 App.js 的入口文件中，使用应用程序的 props，获取启动参数。
+在 App.js 的入口文件中，使用应用程序的 props，获取启动参数。获取方式如下。
 
 ```js
 render() {
