@@ -28,6 +28,8 @@ RCTRootView\* rootView = \[\[RCTRootView alloc\] initWithBridge:bridge moduleNam
 
 #### iOS pop 方法
 
+
+
 ### Android
 
 核心在于：在多个 ReactRootView 对象中共享 ReactInstanceManager。
