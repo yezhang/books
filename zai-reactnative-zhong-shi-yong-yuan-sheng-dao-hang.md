@@ -26,7 +26,7 @@ RCTRootView\* rootView = \[\[RCTRootView alloc\] initWithBridge:bridge moduleNam
 
 原生模块
 
-```objectc
+```oc
 RCT_EXPORT_METHOD(push: (NSString *) screenName
                   coordinator:(NSString *) identifier
                   title:(NSString *) title
