@@ -16,6 +16,12 @@ Sections/HomePage/controller/PYJHomePageViewController.m
 
 RCTRootView\* rootView = \[\[RCTRootView alloc\] initWithBridge:bridge moduleName:@"piaoyouji" **initialProperties**:self.props\];
 
+启动参数设置方式为：
+
+```
+
+```
+
 ### Android
 
 核心在于：在多个 ReactRootView 对象中共享 ReactInstanceManager。
