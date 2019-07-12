@@ -24,7 +24,28 @@ RCTRootView\* rootView = \[\[RCTRootView alloc\] initWithBridge:bridge moduleNam
 
 #### iOS push 方法
 
-### 
+原生模块
+
+```object-c
+RCT_EXPORT_METHOD(push: (NSString *) screenName
+                  coordinator:(NSString *) identifier
+                  title:(NSString *) title
+                  props: (NSDictionary *) props) {
+  RCTLog(@"导航到 %@", screenName);
+  
+  dispatch_async(dispatch_get_main_queue(), ^{
+    
+    NSDictionary *dic = props ?: @{};
+    NSDictionary *info = @{
+                           @"initialScreen" : screenName,
+                           @"navigator" : title ?: @"",
+                           @"coordinator" : identifier,
+                           @"screenProps" : dic
+                           };
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"NAVIGATOR_PUSH" object:nil userInfo:info];
+  });
+}
+```
 
 #### iOS pop 方法
 
