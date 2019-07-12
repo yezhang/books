@@ -19,7 +19,8 @@ RCTRootView\* rootView = \[\[RCTRootView alloc\] initWithBridge:bridge moduleNam
 启动参数设置方式为：
 
 ```
-
+ReactNavigationCoordinator 类的 loadScreen 方法：调用 ReactViewController 类的 initWithScreenName 方法。
+initWithScreenName 方法调用自身类的 initProperties 方法。
 ```
 
 #### iOS push 方法
