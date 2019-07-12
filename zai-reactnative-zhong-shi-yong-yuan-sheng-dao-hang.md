@@ -56,10 +56,10 @@ RCT_EXPORT_METHOD(pop: (NSString *) screenName
                   coordinator:(NSString *) identifier
                   title:(NSString *) title
                   props: (NSDictionary *) props) {
-  
+
   RCTLog(@"返回导航到 %@", screenName);
   dispatch_async(dispatch_get_main_queue(), ^{
-    
+
     NSDictionary *dic = props ?: @{};
     NSDictionary *info = @{
                            @"initialScreen" : screenName,
@@ -72,8 +72,6 @@ RCT_EXPORT_METHOD(pop: (NSString *) screenName
   });
 }
 ```
-
-
 
 ### Android
 
@@ -92,7 +90,7 @@ props.putString("initialScreen", screenName);
 props.putBundle("screenProps", screenProps);
 ```
 
-在 ReactActivityDelegate.java 内部，会通过调用 ReactRootView.startReactApplication 方法设置启动参数。
+在 ReactActivityDelegate.java 内部，会通过调用 ReactRootView.startReactApplication 方法设置启动参数。方法签名是：
 
 ```
 public void startReactApplication(
