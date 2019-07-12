@@ -24,7 +24,16 @@ RCTRootView\* rootView = \[\[RCTRootView alloc\] initWithBridge:bridge moduleNam
 
 com.yonyou.einvoice.modules.react.MainReactActivityDelegate.java
 
-其中的 getLaunchOptions 函数，设置了程序的启动参数。在 ReactActivityDelegate.java 内部，会通过调用 ReactRootView.startReactApplication 方法设置启动参数。
+其中的 getLaunchOptions 函数，设置了程序的启动参数。启动参数包括如下内容：
+
+```java
+props.putString("coordinator", coordinatorName);
+props.putString("navigator", title);
+props.putString("initialScreen", screenName);
+props.putBundle("screenProps", screenProps);
+```
+
+在 ReactActivityDelegate.java 内部，会通过调用 ReactRootView.startReactApplication 方法设置启动参数。
 
 或者
 
@@ -33,4 +42,14 @@ com.yonyou.einvoice.modules.react.ReactNativeFragment.java
 其中的 mReactRootView.startReactApplication 方法，设置启动参数。
 
 项目代码中，com.yonyou.einvoice.modules.react.ReactNativeFragment 与 react Native 库中的类 com.facebook.react.ReactActivityDelegate 有相似代码。
+
+
+
+React
+
+在 App.js 的入口文件中，使用应用程序的 props，获取启动参数。
+
+根据启动参数不同，调用不同路由界面。
+
+
 
