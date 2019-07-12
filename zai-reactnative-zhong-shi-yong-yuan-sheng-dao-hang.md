@@ -49,6 +49,32 @@ RCT_EXPORT_METHOD(push: (NSString *) screenName
 
 #### iOS pop 方法
 
+原生模块
+
+```
+RCT_EXPORT_METHOD(pop: (NSString *) screenName
+                  coordinator:(NSString *) identifier
+                  title:(NSString *) title
+                  props: (NSDictionary *) props) {
+  
+  RCTLog(@"返回导航到 %@", screenName);
+  dispatch_async(dispatch_get_main_queue(), ^{
+    
+    NSDictionary *dic = props ?: @{};
+    NSDictionary *info = @{
+                           @"initialScreen" : screenName,
+                           @"navigator" : title ?: @"",
+                           @"coordinator" : identifier,
+                           @"screenProps" : dic
+                           };
+
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"NAVIGATOR_POP" object:nil userInfo:info];
+  });
+}
+```
+
+
+
 ### Android
 
 核心在于：在多个 ReactRootView 对象中共享 ReactInstanceManager。
@@ -67,6 +93,13 @@ props.putBundle("screenProps", screenProps);
 ```
 
 在 ReactActivityDelegate.java 内部，会通过调用 ReactRootView.startReactApplication 方法设置启动参数。
+
+```
+public void startReactApplication(
+      ReactInstanceManager reactInstanceManager,
+      String moduleName,
+      @Nullable Bundle initialProperties)
+```
 
 或者
 
