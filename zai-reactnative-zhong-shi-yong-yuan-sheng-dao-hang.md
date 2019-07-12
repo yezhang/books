@@ -43,13 +43,27 @@ com.yonyou.einvoice.modules.react.ReactNativeFragment.java
 
 项目代码中，com.yonyou.einvoice.modules.react.ReactNativeFragment 与 react Native 库中的类 com.facebook.react.ReactActivityDelegate 有相似代码。
 
-
-
 React
 
 在 App.js 的入口文件中，使用应用程序的 props，获取启动参数。
 
+```js
+render() {
+  const initScreen = this.props.initialScreen || 'Home';
+  const screenProps = this.props.screenProps || {};
+  let { coordinator, title } = this.props;
+
+  const Route = Routes[initScreen];
+
+  return (
+    <Provider {...store}>
+      <View style={ios ? styles.iosContainer : styles.container}>
+        <Route.screen {...this.props} coordinator={coordinator} title={title} />
+      </View>
+    </Provider>
+  );
+}
+```
+
 根据启动参数不同，调用不同路由界面。
-
-
 
