@@ -26,15 +26,15 @@ RCTRootView\* rootView = \[\[RCTRootView alloc\] initWithBridge:bridge moduleNam
 
 原生模块
 
-```object-c
+```objectc
 RCT_EXPORT_METHOD(push: (NSString *) screenName
                   coordinator:(NSString *) identifier
                   title:(NSString *) title
                   props: (NSDictionary *) props) {
   RCTLog(@"导航到 %@", screenName);
-  
+
   dispatch_async(dispatch_get_main_queue(), ^{
-    
+
     NSDictionary *dic = props ?: @{};
     NSDictionary *info = @{
                            @"initialScreen" : screenName,
@@ -48,8 +48,6 @@ RCT_EXPORT_METHOD(push: (NSString *) screenName
 ```
 
 #### iOS pop 方法
-
-
 
 ### Android
 
