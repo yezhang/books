@@ -189,7 +189,7 @@ Chrome DevTools 的前端页面结构是：
 参考资料
 
 * [Chrome DevTools Contribution Guide](https://docs.google.com/document/d/1WNF-KqRSzPLUUfZqQG5AFeU_Ll8TfWYcJasa_XGf7ro/view#)
-* 使用自定义 DevTools：https://medium.com/@aslushnikov/hacking-chrome-devtools-8c8896f5cef3
+* 使用自定义 DevTools：[https://medium.com/@aslushnikov/hacking-chrome-devtools-8c8896f5cef3](https://medium.com/@aslushnikov/hacking-chrome-devtools-8c8896f5cef3)
 
 
 
