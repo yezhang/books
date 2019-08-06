@@ -105,15 +105,11 @@ gn args out/Default
 
 ### 修改源码、编译、调试
 
-
-
 将 chromium.sh 文件拷贝到 src 父目录\(chromium/\)中。
 
 ```
 source chromium.sh
 ```
-
-
 
     # chromium.sh
 
@@ -180,11 +176,11 @@ source chromium.sh
 bcr
 ```
 
+由于我们在编译时设置了 \`debug\_devtools\` 编译选项，所以现在可以直接使用 **third\_party/blink/renderer/devtools/front\_end **中的源代码作为 DevTools 的源码了。当修改该目录下的源码后，直接刷新 DevTools 工具（Alt + R）即可更新最新的变动。
+
 Chrome DevTools 的前端页面结构是：
 
 修改 DevTools 源码后，如何重新编译更新？
-
-
 
 下载源码的方法：
 
@@ -193,6 +189,7 @@ Chrome DevTools 的前端页面结构是：
 参考资料
 
 * [Chrome DevTools Contribution Guide](https://docs.google.com/document/d/1WNF-KqRSzPLUUfZqQG5AFeU_Ll8TfWYcJasa_XGf7ro/view#)
+* 使用自定义 DevTools：https://medium.com/@aslushnikov/hacking-chrome-devtools-8c8896f5cef3
 
 
 
