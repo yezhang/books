@@ -32,17 +32,33 @@ gclient sync --no-history
 
 下载过程分为三个步骤：下载主项目代码、下载依赖项、下载构建工具。这三个步骤在可以自动依次执行。当下载中断时，重复执行 gclient sync --no-history 命令即可恢复该流程。
 
+如果在执行 hooks 阶段出现错误，可以通过如下脚本继续执行。
 
+```
+env GYP_DEFINES=disable_nacl=1 gclient runhooks
+```
 
+当代码下载完成后，Chrome DevTools 工具的代码已经包含在 src 文件夹中。具体位置是：
 
+```
+src/third_party/blink/renderer/devtools/front_end
+```
 
-Chrome DevTools 源码位置：
+另外，在 github 上可以直接查看 Chrome DevTools 源码：
 
 [https://github.com/ChromeDevTools/devtools-frontend](https://github.com/ChromeDevTools/devtools-frontend)
 
+github 上的 DevTools 源码文件结构与 src 目录下的源码结构相同。
+
 ### 初步编译
 
-进入 src 目录。在 src 目录执行 gn 命令。
+进入 src 目录。
+
+```
+cd src
+```
+
+在 src 目录执行 gn 命令。
 
 ```
 gn gen out/Default
@@ -58,7 +74,7 @@ gn args out/Default
 
 为了编译 Chrome DevTools 工具，推荐使用如下构建参数。
 
-    # args.gn 文件
+    # args.gn 文件, https://gist.github.com/paulirish/2d84a6db1b41b4020685#file-args-gn
 
     cc_wrapper="ccache"
 
@@ -89,17 +105,13 @@ gn args out/Default
 
 ### 修改源码、编译、调试
 
-Chrome DevTools 的前端页面结构是：
 
 
+将 chromium.sh 文件拷贝到 src 父目录\(chromium/\)中。
 
-修改 DevTools 源码后，如何重新编译更新？
-
-1、将前端 UI 的代码拷贝放置到 Chrome 代码库下：third\_party/blink/renderer/devtools/
-
-设置构建参数：
-
-[https://gist.github.com/paulirish/2d84a6db1b41b4020685\#file-args-gn](https://gist.github.com/paulirish/2d84a6db1b41b4020685#file-args-gn)
+```
+source chromium.sh
+```
 
 
 
@@ -161,6 +173,18 @@ Chrome DevTools 的前端页面结构是：
                     bcr
             fi
     }
+
+进入 src 目录。执行上述脚本的命令，启动第一次编译。
+
+```
+bcr
+```
+
+Chrome DevTools 的前端页面结构是：
+
+修改 DevTools 源码后，如何重新编译更新？
+
+
 
 下载源码的方法：
 
