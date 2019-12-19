@@ -132,22 +132,6 @@ render() {
 
 根据启动参数不同，调用不同路由界面。
 
-### Android
 
-核心在于：在多个 ReactRootView 对象中共享 ReactInstanceManager。
-
-样例代码：
-
-com.yonyou.einvoice.modules.react.MainReactActivityDelegate.java
-
-其中的 getLaunchOptions 函数，设置了程序的启动参数。在 ReactActivityDelegate.java 内部，会通过调用 ReactRootView.startReactApplication 方法设置启动参数。
-
-或者
-
-com.yonyou.einvoice.modules.react.ReactNativeFragment.java
-
-其中的 mReactRootView.startReactApplication 方法，设置启动参数。
-
-项目代码中，com.yonyou.einvoice.modules.react.ReactNativeFragment 与 react Native 库中的类 com.facebook.react.ReactActivityDelegate 有相似代码。
 
 

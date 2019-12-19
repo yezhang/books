@@ -6,5 +6,6 @@
 
 基本配色规则共 6 种，分别是“类比色”、“单色”、“三元群”、“互补色”、“复合”、“浓度”。
 
-![](/assets/Adobe Color Themes配色方法@2x.png)
+![](/assets/Adobe&#32;Color&#32;Themes配色方法@2x.png)
 
+#### 2、使用 PS 的调整图层，设计协调的配色
